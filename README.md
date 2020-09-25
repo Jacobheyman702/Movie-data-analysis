@@ -17,6 +17,13 @@ Questions to consider:
 * Why are these questions important from a business perspective?
 ***
 
+**Current research questions:**
+Which genre of movies has the highest average net **profit** over the past 10 years?
+Which genre of movies has the greatest upward trend over the past 10 years for average net profit?
+What is the relations between budget and box office gross? Domestically vs foriegn?
+Which directors/writers/actors make the most profitable movies?
+Relationship between rating and gross? Run-time and gross?
+
 ## Data
 
 Describe the data being used for this project.
