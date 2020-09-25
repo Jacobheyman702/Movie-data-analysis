@@ -39,7 +39,7 @@ Data Sets:
 * imdb_principles_df - **IMDB Movie Principle Roles & Crew)** - tconst, ordering, nconst, category, job, character
 * imdb_title_rating_df - **IMDB Ratings** - tconst, avgeragerating, numvotes
 * bom_movie_gross_df - **Box Office Grosses** - title, studio, domestic_gross, foreign_gross, year
-* movie_budgets_df - **Box Office Grosses & Budgets** - id, release_date, production_budget, domestic_gross, worldwide_gross
+* movie_budgets_df - **Box Office Grosses & Budgets** - id, movie, release_date, production_budget, domestic_gross, worldwide_gross
 
 ## Methods
 
