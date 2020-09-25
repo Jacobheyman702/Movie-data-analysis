@@ -1,93 +1,102 @@
-# Phase 1 Project
+# Movie Data Analysis (Create Better Title)
 
-## Introduction
+**Authors**: Jacob Heyman, Mitch Krieger
 
-In this lesson, we review the guidelines for the Phase 1 Project.
+## Overview
 
-## Objectives
+A one-paragraph overview of the project, including the business problem, data, methods, results and recommendations.
 
-You will be able to:
+## Business Problem
 
-* Start your Phase 1 Project
-* Check that your project meets the requirements
-* Submit your project materials in Canvas
-* Prepare for your project review
+Summary of the business problem you are trying to solve, and the data questions that you plan to answer in order to solve them.
 
-## Project Overview
+***
+Questions to consider:
+* What are the business's pain points related to this project?
+* How did you pick the data analysis question(s) that you did?
+* Why are these questions important from a business perspective?
+***
 
-You've made it all the way through the first phase of this course - take a minute to celebrate your awesomeness!
+## Data
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-1-project-campus/master/awesome.gif)
+Describe the data being used for this project.
 
-All that remains in Phase 1 is to put our newfound data science skills to use with a large project! This project will take an entire week to complete.
+***
+Questions to consider:
+* Where did the data come from, and how do they relate to the data analysis questions?
+* What do the data represent? Who is in the sample and what variables are included?
+* What is the target variable?
+* What are the properties of the variables you intend to use?
+***
 
-### Business Problem
+Data Sets:
+* rt_reviews_df - **Rotten Tomatoes Critics Reviews** - id, review, rating, fresh, critic, top_critic, publisher, date
+* rt_movie_info_df - **Rotten Tomatoes Movie Info** - id, synopsis, genre, director, writer, theater_date, dvd_date, currency, box_office, runtime, studio
+* imdb_title_df - **IMDB Movie titles & genre** - tconst, primary_title, original_title, start_year, runtime_minutes, genres
+* imdb_name_df - **IMDB Staff Names & Jobs** - nconst, primary_name, birth_year, death_year, primary_profession, known_for_titles (tconst)
+* imdb_title_akas_df - **IMDB Movie Region & Language** - title_id (tconst), ordering, title, region, language, type, attributes, _originaltitle
+* imdb_title_crew_df - **IMDB Movie Directors & Writers** - tconst, directors(nmconst), writers (nmconst)
+* imdb_principles_df - **IMDB Movie Principle Roles & Crew)** - tconst, ordering, nconst, category, job, character
+* imdb_title_rating_df - **IMDB Ratings** - tconst, avgeragerating, numvotes
+* bom_movie_gross_df - **Box Office Grosses** - title, studio, domestic_gross, foreign_gross, year
+* movie_budgets_df - **Box Office Grosses & Budgets** - id, release_date, production_budget, domestic_gross, worldwide_gross
 
-Microsoft sees all the big companies creating original video content, and they want to get in on the fun. They have decided to create a new movie studio, but the problem is they don’t know anything about creating movies. They have hired you to help them better understand the movie industry.
-Your team is charged with exploring what type of films are currently doing the best at the box office. You must then translate those findings into actionable insights that the head of Microsoft's new movie studio can use to help decide what type of films to create.
+## Methods
 
-### The Data
+Describe the process for analyzing or modeling the data. For Phase 1, this will be descriptive analysis.
 
-In the folder `zippedData` are movie datasets from:
+***
+Questions to consider:
+* How did you prepare, analyze or model the data?
+* Why is this approach appropriate given the data and the business problem?
+***
 
-* Box Office Mojo
-* IMDB
-* Rotten Tomatoes
-* TheMovieDB.org
+## Results
 
-It is up to you to decide what data from this to use and how to use it. If you want to make this more challenging, you can scrape websites or make API calls to get additional data. If you are feeling overwhelmed or behind (e.g. struggled with the Phase 1 Code Challenge), we recommend you use only the following data files:
+Present your key results. For Phase 1, this will be findings from your descriptive analysis.
 
-* imdb.title.basics
-* imdb.title.ratings
-* bom.movie_gross
+***
+Questions to consider:
+* How do you interpret the results?
+* How confident are you that your results would generalize beyond the data you have?
+***
 
-## Deliverables
+Here is an example of how to embed images from your sub-folder:
 
-There are three deliverables for this project:
+### Visual 1
+![graph1](./images/viz1.png)
 
-1. A **GitHub repository**
-2. A **Jupyter Notebook**
-3. A **non-technical presentation**
+## Conclusions
 
-Keep in mind that the audience for these deliverables is not only your teacher, but also potential employers. Employers will look at your project deliverables to evaluate multiple skills, including coding, modeling, communication, and domain knowledge. You will want to polish these as much as you can, both during the course and afterwards.
+Provide your conclusions about the work you've done, including any limitations or next steps.
 
-We provide a few resources to help you understand what makes for good deliverables.
-- The rubric associated with this assignment
-- [A template for you to use, with an example for reference][].
+***
+Questions to consider:
+* What would you recommend the business do as a result of this work?
+* What are some reasons why your analysis might not fully solve the business problem?
+* What else could you do in the future to improve this project?
+***
 
-### GitHub Repository
+## For More Information
 
-Your GitHub repository is the public-facing version of your project that your instructors and potential employers will see - make it as accessible as you can. At a minimum, it should contain all your project files and a README.md file that summarizes your project and helps visitors navigate the repository.
+Please review our full analysis in [our Jupyter Notebook](./dsc-phase1-project-template.ipynb) or our [presentation](./DS_Project_Presentation.pdf).
 
-### Jupyter Notebook
+For any additional questions, please contact **name & email, name & email**
 
-Your Jupyter Notebook is the primary source of information about your analysis. At a minimum, it should contain or import all of the code used in your project and walk the reader through your project from start to finish. You may choose to use multiple Jupyter Notebooks in your project, but you should have one that provides a full project overview as a point of entry for visitors.
+## Repository Structure
 
-### Non-Technical Presentation
+Describe the structure of your repository and its contents, for example:
 
-Your non-technical presentation is your opportunity to communicate clearly and concisely about your project and it's real-world relevance. The target audience should be people with limited technical knowledge who may be interested in leveraging your project. For Phase 1, these would be Microsoft executives interested in making decisions about movie development. We recommend using Google Slides, PowerPoint or Keynote to create your presentation slides.
-
-## Getting Started
-
-Please start by reviewing this document. If you have any questions, please ask your instructor ASAP.
-
-We recommend you check out [the Phase 1 Project Templates and Examples repo](https://github.com/learn-co-curriculum/dsc-project-template) and use the MVP template for your project.
-
-Alternatively, you can fork [the Phase 1 Project Repository][], clone it locally, and work in the `student.ipynb` file. Make sure to also add and commit a PDF of your presentation to your repository with a file name of `presentation.pdf`.
-
-## Project Submission and Review
-
-Review [the Phase Project Submission and Review guidance][] to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
-
-## Summary
-
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
-
-## Tips
-
-Ask for help from your peers or instructors early and often.
-
-[A template for you to use, with an example for reference]: https://github.com/learn-co-curriculum/dsc-project-template
-[Google Chrome Save to PDF instructions]: https://www.wikihow.com/Save-a-Web-Page-as-a-PDF-in-Google-Chrome
-[the Phase 1 Project Repository]: https://github.com/learn-co-curriculum/dsc-phase-1-project-campus
-[the Phase Project Submission and Review guidance]: https://github.com/learn-co-curriculum/dsc-project-submissions-campus
+```
+├── __init__.py                         <- .py file that signals to python these folders contain packages
+├── README.md                           <- The top-level README for reviewers of this project
+├── dsc-phase1-project-template.ipynb   <- Narrative documentation of analysis in Jupyter notebook
+├── DS_Project_Presentation.pdf         <- PDF version of project presentation
+├── code
+│   ├── __init__.py                     <- .py file that signals to python these folders contain packages
+│   ├── visualizations.py               <- .py script to create finalized versions of visuals for project
+│   ├── data_preparation.py             <- .py script used to pre-process and clean data
+│   └── eda_notebook.ipynb              <- Notebook containing data exploration
+├── data                                <- Both sourced externally and generated from code
+└── images                              <- Both sourced externally and generated from code
+```
