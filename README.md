@@ -18,11 +18,11 @@ Questions to consider:
 ***
 
 **Current research questions:**
-Which genre of movies has the highest average net **profit** over the past 10 years?
-Which genre of movies has the greatest upward trend over the past 10 years for average net profit?
-What is the relations between budget and box office gross? Domestically vs foriegn?
-Which directors/writers/actors make the most profitable movies?
-Relationship between rating and gross? Run-time and gross?
+1. Which genre of movies has the highest average net **profit** over the past 10 years?
+2. Which genre of movies has the greatest upward trend over the past 10 years for average net profit?
+3. What is the relations between budget and box office gross? Domestically vs foriegn?
+4. Which directors/writers/actors make the most profitable movies?
+5. Relationship between rating and gross? Run-time and gross?
 
 ## Data
 
