@@ -4,69 +4,57 @@
 
 ## Overview
 
-A one-paragraph overview of the project, including the business problem, data, methods, results and recommendations.
+Using data from IMDB, we investigated trends in films the past 10 years in order to best reccomend to Microsoft what strategies to employ to launch their new video and content creation division. We analyized various metrics of a film's success including, gross revenues, net profit and return on investment (percentage gross) against a variety of factors such as genre, rating, runtime, and production budget. Our findings indicate that Microsoft should focus on producing new films with conservative budgets with an emphasis on (XXXXXXXX) genres. In addition, Microsoft should not be concerned with high-profile principle cast and crew, nor should they be overly concerned with runtime, performance internationally or movie-goer reviews as our data suggests that these factors are not correlated with a film's financial success. 
 
 ## Business Problem
 
-Summary of the business problem you are trying to solve, and the data questions that you plan to answer in order to solve them.
+In order to stay competitive with existing tech companies like Apple and Amazon, Microsoft wishes to start their own video content creation studio. To best launch their new venture, Microsoft hopes to look at trends in movie data in order to focus on producing the most competitive content. From these trends, Microsoft is seeking actionable insights to spearhead the opening of their movie studio and produce data-driven projects. A challenege for Microsoft will be differentiating themselves in the crowded field of content creation, and determining what factors most affect a film's success.
 
-***
-Questions to consider:
-* What are the business's pain points related to this project?
-* How did you pick the data analysis question(s) that you did?
-* Why are these questions important from a business perspective?
-***
+**Questions to Consider:**
+To provide the best insights for Microsoft's new studio, we focused on movie data from the past 10 years using profit and percentage gross as metrics of success and what factors affect that success. With this in mind we developed the following question to investigate:
 
-**Current research questions:**
 1. Which genre of movies has the highest average net **profit** over the past 10 years?
-2. Which genre of movies has the greatest upward trend over the past 10 years for average net profit?
-3. What is the relations between budget and box office gross? Domestically vs foriegn?
-4. Which directors/writers/actors make the most profitable movies?
-5. Relationship between rating and gross? Run-time and gross?
+2. Which genre of movies has the greatest percentage return on investment (percentage gross)?
+3. What is the relationsship between box office gross/ROIT (percentage gross) and the following factors?
+   1. IMDB Rating
+   2. Runtime
+   3. Budget
+4. Does director/writer/acting choices affect the profitiability of a movie? 
+5. What is the relationship between domestic gross and foreign gross?
 
 ## Data
 
-Describe the data being used for this project.
-
-***
-Questions to consider:
-* Where did the data come from, and how do they relate to the data analysis questions?
-* What do the data represent? Who is in the sample and what variables are included?
-* What is the target variable?
-* What are the properties of the variables you intend to use?
-***
+To answer the above questions, we collected various datasets from IMDB and the Box Office. Then, we created a new set of data to analyze the relevant factors that affect our metrics of success and our research questions. The following are the sources of data we used:
 
 Data Sets:
-* rt_reviews_df - **Rotten Tomatoes Critics Reviews** - id, review, rating, fresh, critic, top_critic, publisher, date
-* rt_movie_info_df - **Rotten Tomatoes Movie Info** - id, synopsis, genre, director, writer, theater_date, dvd_date, currency, box_office, runtime, studio
 * imdb_title_df - **IMDB Movie titles & genre** - tconst, primary_title, original_title, start_year, runtime_minutes, genres
 * imdb_name_df - **IMDB Staff Names & Jobs** - nconst, primary_name, birth_year, death_year, primary_profession, known_for_titles (tconst)
-* imdb_title_akas_df - **IMDB Movie Region & Language** - title_id (tconst), ordering, title, region, language, type, attributes, _originaltitle
 * imdb_title_crew_df - **IMDB Movie Directors & Writers** - tconst, directors(nmconst), writers (nmconst)
 * imdb_principles_df - **IMDB Movie Principle Roles & Crew)** - tconst, ordering, nconst, category, job, character
 * imdb_title_rating_df - **IMDB Ratings** - tconst, avgeragerating, numvotes
-* bom_movie_gross_df - **Box Office Grosses** - title, studio, domestic_gross, foreign_gross, year
 * movie_budgets_df - **Box Office Grosses & Budgets** - id, movie, release_date, production_budget, domestic_gross, worldwide_gross
+
+From these datasets we eliminated any irrelevant data and then found the worldwide net profit and return on investment (percentage gross) as our main metrics of success. We then decided to focus how on these facors affect those metrics in our analysis: year, runtime_minutes, genre, production_budget, principle_crew (nmconst), averagerating.
 
 ## Methods
 
-Describe the process for analyzing or modeling the data. For Phase 1, this will be descriptive analysis.
-
-***
-Questions to consider:
-* How did you prepare, analyze or model the data?
-* Why is this approach appropriate given the data and the business problem?
-***
+This project uses a graphical and descriptive approach to analysis of the data. Based on the needs of the research questions, isolated factors were used to create various graphs (scatter, bar, line, kernel density estimates) to provide visualization to data trends. From these trends we can generate insights for Microsoft studio's trajectory.
 
 ## Results
 
-Present your key results. For Phase 1, this will be findings from your descriptive analysis.
+Our findings concerning the effects of genre on net worldwide profit reveal that specific genres have higher financial returns, although others have a better percentage gross return.
 
-***
-Questions to consider:
-* How do you interpret the results?
-* How confident are you that your results would generalize beyond the data you have?
-***
+(XXXXX INSERT GRAPH XXXXXX)
+
+Our analysis of principle crew, rating and runtime suggests that there is no direct correlation on ROI. Despite the there being no direct correlation, highly successful movies tend to fall near the avgerae of these factors shown by kernel density estimates.
+
+(XXXX INSERT GRAPH(S) XXXXXXX)
+
+In two separate analyses, production budget was found to have a significant impact on ROI. Lower buget films have a much higher likelihood of a high ROI but high budget films more consitently have a positive return.
+
+(XXXX INSERT GRAPH(S) XXXXXXX)
+
+There is also a strong positive correlation between foreign and domestic gross:
 
 Here is an example of how to embed images from your sub-folder:
 
@@ -75,22 +63,27 @@ Here is an example of how to embed images from your sub-folder:
 
 ## Conclusions
 
-Provide your conclusions about the work you've done, including any limitations or next steps.
+Our analysis leads us to suggest the following strategies to Microsoft:
 
-***
-Questions to consider:
-* What would you recommend the business do as a result of this work?
-* What are some reasons why your analysis might not fully solve the business problem?
-* What else could you do in the future to improve this project?
-***
+- **Focus on a select few genres:** By focusing their efforts on a few genres with high potential grosses and/or ROI, Microsoft can build a competitive portfolio of films. The results of our analysis demonstrate that the following genres may yeild high successs: 
+
+(INSERT TABLE with high gross and high ROI)
+
+- **Diversify Production Budgets:** Because high budget films more consistenly have net positive returns but are expensive and lower budger films have a higher return but a higher rate of failue, we suggest have a mixed portfolio of high and low budget films. Although there are outliers with high ROIs in extremely low budget films (less than $500,000), based off our findings we reccomend the setting lower budget portion of the portfolio between $500,000 to $5 million, and the higher buget portion at $5 to $20 million.
+  
+- **Movie Budget Spending:** There is little to no correlation between the factors average rating, princple crew/cast, and runtime, but there is a strong correlation between budget and success of a film. With this in mind, we can infer that the use of the budget can be used on other facets of movie production and studio operation without concern of major impact on success. Similarly, because there is a strong correlation between success domestically and in the foreign market, Microsoft can produce domestically successful movies without concern about their success abroad. 
+
+## Next Steps
+
+Many of the factors from our analysis drew a null conclusion. In a further investigation we would suggest looking at new factors such as, MPAA rating, awards, release time, etc to gauge other potential predictors of movie success. In addition, it would be beneficial to look at other factors of success that add to total profit such as streaming revenues, DVD sales, merchandising, advertising and so on, especially considering whether the distribution of Microsoft's movies will be in theaters or online via streaming. 
 
 ## For More Information
 
-Please review our full analysis in [our Jupyter Notebook](./dsc-phase1-project-template.ipynb) or our [presentation](./DS_Project_Presentation.pdf).
+Please review our full analysis in [our Jupyter Notebook](./dsc-phase1-project-template.ipynb) (XXX UPDATE NOTEBOOOK XXX) or our [presentation](./DS_Project_Presentation.pdf). (XXX CREATE PRESENTATION XXXX)
 
-For any additional questions, please contact **name & email, name & email**
+For any additional questions, please contact **Mitch Krieger (mitkrieger@gmail.com), Jacob Heyman (jacobheyman702@gmail.com)**
 
-## Repository Structure
+## Repository Structure (XXXX UPDATE REPOSITORY XXXX)
 
 Describe the structure of your repository and its contents, for example:
 
