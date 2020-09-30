@@ -1,14 +1,7 @@
 import pandas as pd
 
-#Rotten Tomatoes Reviews
-rt_review_df = pd.read_csv('zippedData/rt.reviews.tsv.gz', delimiter = '\t', encoding = 'unicode_escape')
-
-#Rotten Tomatoes Movie Info
-rt_movie_info = pd.read_csv('zippedData/rt.movie_info.tsv.gz', delimiter = '\t', encoding = 'unicode_escape')
-
 #IMDB Titles
 imdb_title_df = pd.read_csv('zippedData/imdb.title.basics.csv.gz')
-
 
 #IMDB Staff Names & Jobs
 imdb_name_df = pd.read_csv('zippedData/imdb.name.basics.csv.gz')
@@ -54,3 +47,17 @@ joined_table = imdb_title_df.merge(movie_budget_df, how='left', on = 'primary_ti
 joined_table = joined_table.merge(imdb_title_rating_df, how='left', on = 'tconst')
 #Drop NA values, due to question revolving around bugets vs grosses
 joined_table.dropna(subset = ['production_budget'], inplace = True)
+joined_table.drop(['id'],axis = 1, inplace = True)
+
+
+#No missing values for gross:
+noZero_gross = joined_table.loc[(joined_table.domestic_gross>0.0)&(joined_table.worldwide_gross>0) ]
+
+#one to one join to incoroporate writers & directors
+crew_grosses_df = pd.merge(noZero_gross,imdb_title_crew_df,how='inner',on='tconst')
+
+#one to many join to incorporate principle roles (actors,writers,directors, composers, and so on)
+principles_grosses_df = pd.merge(noZero_gross,imdb_principles_df,how='inner',on='tconst')
+
+#no missing values for genres:
+droped_genres_dataframe = noZero_gross.dropna(subset = ['genres'])
