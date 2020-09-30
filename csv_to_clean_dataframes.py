@@ -8,8 +8,7 @@ rt_movie_info = pd.read_csv('zippedData/rt.movie_info.tsv.gz', delimiter = '\t',
 
 #IMDB Titles
 imdb_title_df = pd.read_csv('zippedData/imdb.title.basics.csv.gz')
-#Drop original title, unessacary for analysis
-imdb_title_df.drop(['original_title'],axis=1, inplace = True) 
+
 
 #IMDB Staff Names & Jobs
 imdb_name_df = pd.read_csv('zippedData/imdb.name.basics.csv.gz')
