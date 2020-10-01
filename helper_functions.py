@@ -27,6 +27,9 @@ def genre_vs_net (genre,ax):
     return ax
 
 def genre_vs_percent_gross (genre,ax):
+    """
+    Returns an axis that plots a genres's percentage worldwide gross performace as a barchart over the past 10 years
+    """
     df = genre_dataframe_select(genre)
     y = df.groupby(['start_year'])['percent_gross'].mean()[:10]
     x = y.index
@@ -37,3 +40,17 @@ def genre_vs_percent_gross (genre,ax):
     ax.set_ylim(bottom=0,top= 2e3)
     return ax
 
+def label_chart(ax,title=None,xlabel=None,ylabel=None):
+    """
+    Sets title and axis labels on a given axes
+    """
+    if title:
+        ax.set_title(title)
+        
+    if xlabel:
+        ax.set_xlabel(xlabel)
+    
+    if ylabel:
+        ax.set_ylabel(ylabel)
+        
+    return None

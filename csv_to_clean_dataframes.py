@@ -35,6 +35,7 @@ movie_budget_df['domestic_gross'] = movie_budget_df['domestic_gross'].str.replac
 movie_budget_df['production_budget'] = movie_budget_df['production_budget'].str.replace('$','').str.replace(',','').astype(int)
 #Create worldwide net profit and percent gross of budget columns
 movie_budget_df['worldwide_net'] = movie_budget_df['worldwide_gross'] - movie_budget_df['production_budget']
+movie_budget_df['foreign_gross'] = movie_budget_df['worldwide_gross'] - movie_budget_df['domestic_gross']
 movie_budget_df['percent_gross'] = (movie_budget_df['worldwide_net'] / movie_budget_df['production_budget'])*100
 #Rename movie column to primary_title for joining purposes/consistency
 movie_budget_df.rename({'movie':'primary_title'}, axis = 1, inplace = True)

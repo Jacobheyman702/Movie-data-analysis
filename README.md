@@ -10,15 +10,15 @@ Using data from IMDB, we investigated trends in films the past 10 years in order
 
 In order to stay competitive with existing tech companies like Apple and Amazon, Microsoft wishes to start their own video content creation studio. To best launch their new venture, Microsoft hopes to look at trends in movie data in order to focus on producing the most competitive content. From these trends, Microsoft is seeking actionable insights to spearhead the opening of their movie studio and produce data-driven projects. A challenege for Microsoft will be differentiating themselves in the crowded field of content creation, and determining what factors most affect a film's success.
 
-**Questions to Consider:**
+**Research Questions to Consider:**
 To provide the best insights for Microsoft's new studio, we focused on movie data from the past 10 years using profit and percentage gross as metrics of success and what factors affect that success. With this in mind we developed the following question to investigate:
 
 1. Which genre of movies has the highest average net **profit** over the past 10 years?
 2. Which genre of movies has the greatest percentage return on investment (percentage gross)?
 3. What is the relationsship between box office gross/ROIT (percentage gross) and the following factors?
-   1. IMDB Rating
-   2. Runtime
-   3. Budget
+   - IMDB Rating
+   - Runtime
+   - Budget
 4. Does director/writer/acting choices affect the profitiability of a movie? 
 5. What is the relationship between domestic gross and foreign gross?
 
@@ -67,7 +67,8 @@ Our analysis leads us to suggest the following strategies to Microsoft:
 
 - **Focus on a select few genres:** By focusing their efforts on a few genres with high potential grosses and/or ROI, Microsoft can build a competitive portfolio of films. The results of our analysis demonstrate that the following genres may yeild high successs: 
 
-(INSERT TABLE with high gross and high ROI)
+    - High Gross: Action, Adventure, Animation, Fantasy, Sci-Fi, Musical
+    - High ROI: Horror, Mystery, Thriller, Documentary, Animation
 
 - **Diversify Production Budgets:** Because high budget films more consistenly have net positive returns but are expensive and lower budger films have a higher return but a higher rate of failue, we suggest have a mixed portfolio of high and low budget films. Although there are outliers with high ROIs in extremely low budget films (less than $500,000), based off our findings we reccomend the setting lower budget portion of the portfolio between $500,000 to $5 million, and the higher buget portion at $5 to $20 million.
   
