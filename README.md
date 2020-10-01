@@ -1,3 +1,5 @@
+![MicrosoftFilm](./images/MicrosoftFilm.jpg)
+
 # Microsoft Studios: Film Production Strategy
 
 **Authors**: Jacob Heyman, Mitch Krieger
