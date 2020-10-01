@@ -4,7 +4,7 @@
 
 ## Overview
 
-Using data from IMDB, we investigated trends in films the past 10 years in order to best reccomend to Microsoft what strategies to employ to launch their new video and content creation division. We analyized various metrics of a film's success including, gross revenues, net profit and return on investment (percentage gross) against a variety of factors such as genre, rating, runtime, and production budget. Our findings indicate that Microsoft should focus on producing new films with conservative budgets with an emphasis on (XXXXXXXX) genres. In addition, Microsoft should not be concerned with high-profile principle cast and crew, nor should they be overly concerned with runtime, performance internationally or movie-goer reviews as our data suggests that these factors are not correlated with a film's financial success. 
+Using data from IMDB, we investigated trends in films the past 10 years in order to best reccomend to Microsoft what strategies to employ to launch their new video and content creation division. We analyized various metrics of a film's success including, gross revenues, net profit and return on investment (percentage gross) against a variety of factors such as genre, rating, runtime, and production budget. Our findings indicate that Microsoft should focus on producing new films with conservative budgets with an emphasis on certain genres. In addition, Microsoft should not be concerned with high-profile principle cast and crew, nor should they be overly concerned with runtime, performance internationally or movie-goer reviews as our data suggests that these factors are not correlated with a film's financial success. 
 
 ## Business Problem
 
@@ -46,7 +46,7 @@ Our findings concerning the effects of genre on net worldwide profit reveal that
 
 (XXXXX INSERT GRAPH XXXXXX)
 
-Our analysis of principle crew, rating and runtime suggests that there is no direct correlation on ROI. Despite the there being no direct correlation, highly successful movies tend to fall near the avgerae of these factors shown by kernel density estimates.
+Our analysis of principle crew, rating and runtime suggests that there is no direct correlation on ROI. Despite the there being no direct correlation, highly successful movies tend to fall near the average of these factors shown by kernel density estimates.
 
 (XXXX INSERT GRAPH(S) XXXXXXX)
 
@@ -56,7 +56,7 @@ In two separate analyses, production budget was found to have a significant impa
 
 There is also a strong positive correlation between foreign and domestic gross:
 
-Here is an example of how to embed images from your sub-folder:
+
 
 ### Visual 1
 ![graph1](./images/viz1.png)
