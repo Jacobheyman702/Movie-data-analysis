@@ -1,4 +1,4 @@
-# Movie Data Analysis (Create Better Title)
+# Microsoft Studios: Film Production Strategy
 
 **Authors**: Jacob Heyman, Mitch Krieger
 
@@ -15,7 +15,7 @@ To provide the best insights for Microsoft's new studio, we focused on movie dat
 
 1. Which genre of movies has the highest average net **profit** over the past 10 years?
 2. Which genre of movies has the greatest percentage return on investment (percentage gross)?
-3. What is the relationsship between box office gross/ROIT (percentage gross) and the following factors?
+3. What is the relationsship between box office gross/ROI (percentage gross) and the following factors?
    - IMDB Rating
    - Runtime
    - Budget
@@ -44,22 +44,24 @@ This project uses a graphical and descriptive approach to analysis of the data. 
 
 Our findings concerning the effects of genre on net worldwide profit reveal that specific genres have higher financial returns, although others have a better percentage gross return.
 
-(XXXXX INSERT GRAPH XXXXXX)
+![WorldwideNetbyGenre](./images/figure_gross_genre.png)
+![PercentGrossbyGenre](./images/figure_percent_genre.png)
 
 Our analysis of principle crew, rating and runtime suggests that there is no direct correlation on ROI. Despite the there being no direct correlation, highly successful movies tend to fall near the average of these factors shown by kernel density estimates.
 
-(XXXX INSERT GRAPH(S) XXXXXXX)
+KDE Runtime vs Percent Gross | KDE IMDB Rating vs Percent Gross
+:-: | :-: 
+![alt](./images/kde_runtime.png) | ![alt](./images/kde_rating.png)
+
+KDE Actor Average Movie Rating vs Percent Gross | KDE WritersAverage Movie Rating vs Percent Gross |KDE Directors Average Movie Rating vs Percent Gross
+:-: | :-: | :-:
+![KDE_actors](./images/kde_actors.png) |![KDE_writers](./images/kde_writers.png) |![KDE_directors](./images/kde_directors.png)|
 
 In two separate analyses, production budget was found to have a significant impact on ROI. Lower buget films have a much higher likelihood of a high ROI but high budget films more consitently have a positive return.
 
-(XXXX INSERT GRAPH(S) XXXXXXX)
-
-There is also a strong positive correlation between foreign and domestic gross:
-
-
-
-### Visual 1
-![graph1](./images/viz1.png)
+Budget vs Percent Gross by year|KDE Production Budget vs Percent Gross
+:-: | :-: 
+![budget_over_years](./images/figure_budget.png) | ![KDE_budget](./images/kde_budget.png)
 
 ## Conclusions
 
